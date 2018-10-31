@@ -6,7 +6,7 @@
 Assets/AssetStoreTools*
 
 #Folders
-Assets/Mecanim
+Assets/Mecanim/*
 
 # Visual Studio cache directory
 .vs/
