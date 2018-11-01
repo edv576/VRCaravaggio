@@ -136,6 +136,45 @@ Material:
     - _PostfixRenderQueue: 1
     m_Colors:
     - _EdgeColor: {r: 0.4, g: 1, b: 1, a: 1}
+--- !u!1 &40629897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 910977af23230ba4da4863caa1d819e2,
+    type: 3}
+  m_PrefabInternal: {fileID: 1539561151}
+--- !u!95 &40629898
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40629897}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 027a1160eee3ca848aa80e143ef63378, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &40629901
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40629897}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e7398491c9257e24eb3cb2024be48f7e, type: 2}
+  m_Animations:
+  - {fileID: 0}
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &81703197
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &352217816
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -752,6 +791,7 @@ GameObject:
   - component: {fileID: 1166687225}
   - component: {fileID: 1166687224}
   - component: {fileID: 1166687223}
+  - component: {fileID: 1166687228}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -801,7 +841,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 73849b68e5be84e4e9154c66b9146eed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -841,6 +881,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &1166687228
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166687222}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: f1ac980fd6d52c440a05e656c507c355, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: f1ac980fd6d52c440a05e656c507c355, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1429113572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1070,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 910977af23230ba4da4863caa1d819e2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 201d33ed5ea60a34c8611c073737b30e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 910977af23230ba4da4863caa1d819e2, type: 3}
   m_IsPrefabAsset: 0
@@ -1203,6 +1262,20 @@ MonoBehaviour:
   boneID: 1
   ikEnabled: 0
   ikWeight: 1
+--- !u!111 &1539561158
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539561152}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e7398491c9257e24eb3cb2024be48f7e, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!64 &1539561162
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1375,7 +1448,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1926478526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.88, z: -13.86}
+  m_LocalPosition: {x: 0, y: 0.88, z: -13.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1407,7 +1480,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.21
+  m_Intensity: 0.15
   m_Range: 10.7
   m_SpotAngle: 30
   m_CookieSize: 10
