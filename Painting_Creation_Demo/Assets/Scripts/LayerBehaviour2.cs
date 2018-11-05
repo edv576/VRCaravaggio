@@ -8,10 +8,13 @@ public class LayerBehaviour2 : MonoBehaviour {
     public Material[] layers;
     public GameObject layer1;
     public GameObject layer2;
+    public GameObject[] stages;
     Image image;
     Material matLayer1;
     Material matLayer2;
     Material currentMatLayer;
+    Material[] matEnvironment1;
+    Material[] matEnvironment2;
     int layer;
 
 
@@ -33,6 +36,31 @@ public class LayerBehaviour2 : MonoBehaviour {
         matLayer2.color = tcolor;
         //imageLayer1.preserveAspect = true;
         //imageLayer2.preserveAspect = true;
+
+
+        matEnvironment1 = stages[0].GetComponent<SkinnedMeshRenderer>().materials;
+        for(int i = 0; i< matEnvironment1.Length; i++)
+        {
+            tcolor = matEnvironment1[i].color;
+            tcolor.a = 0.0f;
+
+            matEnvironment1[i].color = tcolor;
+        }
+
+        matEnvironment2 = stages[1].GetComponent<SkinnedMeshRenderer>().materials;
+        for (int i = 0; i < matEnvironment2.Length; i++)
+        {
+            tcolor = matEnvironment2[i].color;
+            tcolor.a = 0.0f;
+
+            matEnvironment2[i].color = tcolor;
+        }
+
+
+        //tcolor = stages[1].GetComponent<SkinnedMeshRenderer>().material.color;
+        //tcolor.a = 0.0f;
+
+        //stages[1].GetComponent<SkinnedMeshRenderer>().material.color = tcolor;
 
     }
 
@@ -97,6 +125,7 @@ public class LayerBehaviour2 : MonoBehaviour {
         {
             Color tcolor1;
             Color tcolor2;
+            Color tColorEnvironment;
 
 
             for (float f = 1.0f; f >= 0; f -= 0.005f)
@@ -107,6 +136,26 @@ public class LayerBehaviour2 : MonoBehaviour {
                 tcolor2.a = 1 - f;
                 //imageLayer1.color = tcolor1;
                 layer2.GetComponent<Renderer>().material.color = tcolor2;
+
+                matEnvironment1 = stages[0].GetComponent<SkinnedMeshRenderer>().materials;
+                for (int i = 0; i < matEnvironment1.Length; i++)
+                {
+                    tColorEnvironment = matEnvironment1[i].color;
+                    tColorEnvironment.a = f;
+
+                    matEnvironment1[i].color = tColorEnvironment;
+                }
+
+                matEnvironment2 = stages[1].GetComponent<SkinnedMeshRenderer>().materials;
+                for (int i = 0; i < matEnvironment2.Length; i++)
+                {
+                    tColorEnvironment = matEnvironment2[i].color;
+                    tColorEnvironment.a = 1.0f - f;
+
+                    matEnvironment2[i].color = tColorEnvironment;
+                }
+
+
 
                 yield return new WaitForSeconds(0.005f);
 
@@ -148,6 +197,15 @@ public class LayerBehaviour2 : MonoBehaviour {
                 Color tcolor = matLayer1.color;
                 tcolor.a = f;
                 matLayer1.color = tcolor;
+
+                matEnvironment1 = stages[0].GetComponent<SkinnedMeshRenderer>().materials;
+                for (int i = 0; i < matEnvironment1.Length; i++)
+                {
+                    tcolor = matEnvironment1[i].color;
+                    tcolor.a = f;
+
+                    matEnvironment1[i].color = tcolor;
+                }
 
                 yield return new WaitForSeconds(0.005f);
 
