@@ -2746,7 +2746,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3e94547e659f8d84aa546fef0d3113e8, type: 2}
+  - {fileID: 2100000, guid: e67fde2e5c8f5374bb6a8fb3de117cba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6300,6 +6300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintingScreen: {fileID: 8400000, guid: 6dd4339b601122042846c85e177487ba, type: 2}
+  bigScreen2: {fileID: 503018000}
+  currentRT: {fileID: 0}
 --- !u!1 &1355774796
 GameObject:
   m_ObjectHideFlags: 0
